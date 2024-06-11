@@ -68,11 +68,11 @@ const getTask = catchAsync(async (req, res) => {
 const updateTask = catchAsync(async (req, res) => {
   let { title, description, status, priority } = req.body;
   //validate  each field
-  if (!title || !description) {
-    return res.status(400).send({
-      message: "Please fill in all required fields",
-    });
-  }
+  // if (!title || !description) {
+  //   return res.status(400).send({
+  //     message: "Please fill in all required fields",
+  //   });
+  // }
   //validate priority field
   const allowedPriority = ["Low", "Medium", "High"];
   if (priority && !allowedPriority.includes(priority)) {

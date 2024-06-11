@@ -39,7 +39,7 @@ const login = catchAsync(async (req, res) => {
       }
       console.log(user._id);
       const token = jwt.sign({ id: user._id }, jwtSecret, {
-        expiresIn: "1h",
+        expiresIn: "5h",
       });
 
       res.status(200).send({
